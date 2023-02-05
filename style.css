@@ -1,0 +1,82 @@
+/* Globals */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/*
+font-family: 'Noto Sans Display', sans-serif;
+font-family: 'Noto Serif Display', serif;
+*/
+
+:root {
+    --background-color: hsl(44, 72%, 93%);
+    --accent-color-one: hsl(20, 31%, 58%);
+    --accent-color-two: hsl(26, 64%, 77%);
+    --main-blue: hsl(228, 20%, 15%);
+    --sans-serif: "Noto Sans Display", sans-serif;
+    --serif: "Noto Serif Display", serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    color: var(--main-blue);
+}
+
+main {
+    background-color: var(--background-color);
+    display: grid;
+    grid-template: repeat(5, 1fr) / repeat(12, 1fr);
+    gap: 1rem;
+    width: 100%;
+}
+
+.page {
+    height: 100vh;
+    width: 100%;
+    grid-column: 4 / span 6;
+}
+
+.page.page-home {
+    grid-column: 4 / span 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--serif);
+    text-transform: uppercase;
+}
+
+.page-home h1 {
+    font-weight: 100;
+    font-size: 7vw;
+    user-select: none;
+    line-height: 100%;
+}
+
+.sticky-navbar {
+    position: sticky;
+    width: 150px;
+    height: 100%;
+    top: 0;
+    grid-column: 10;
+    display: flex;
+    align-items: center;
+}
+
+.sticky-navbar ul li {
+    list-style: none;
+    font-family: var(--sans-serif);
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sticky-navbar ul li:hover {
+    list-style-type: "\27A4";
+    margin-left: 0.5rem;
+}
