@@ -9,8 +9,8 @@
 }
 
 /*
-font-family: 'Noto Sans Display', sans-serif;
-font-family: 'Noto Serif Display', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Yeseva One', cursive;
 */
 
 :root {
@@ -18,8 +18,8 @@ font-family: 'Noto Serif Display', serif;
     --accent-color-one: hsl(20, 31%, 58%);
     --accent-color-two: hsl(26, 64%, 77%);
     --main-blue: hsl(228, 20%, 15%);
-    --sans-serif: "Noto Sans Display", sans-serif;
-    --serif: "Noto Serif Display", serif;
+    --body-text: "Josefin Sans", sans-serif;
+    --header: "Yeseva One", cursive;
     scroll-behavior: smooth;
 }
 
