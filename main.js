@@ -1,38 +1,19 @@
-const pageArray = Array.from(document.querySelectorAll(".page"));
-const navigationArray = Array.from(document.querySelectorAll(".sticky-navbar ul li"));
-const navigationItemClassArray = [];
+// Observe elements to animate once in view
+const pages = Array.from(
+    document.querySelectorAll("section:not(:first-child)")
+);
 
-navigationArray.forEach((item) => {
-    navigationItemClassArray.push(item.className);
-});
-
-navigationArray.forEach((listItem, index) => {
-    listItem.addEventListener("click", () => {
-        pageArray[index].scrollIntoView(true);
-    });
-});
-
-function addObserver(selector, options = {}) {
-    let elements = document.querySelectorAll(selector);
-    elements = Array.from(elements);
-    elements.forEach((element) => {
-        observerEvent(element, options);
-    });
-}
-
-function observerEvent(element, options) {
-    const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(
+    (entries) => {
         entries.forEach((entry) => {
-            const observedElementClassArray = Array.from(entry.target.classList);
             if (entry.isIntersecting) {
-                for (let i = 0; i < observedElementClassArray.length; i++) {
-                    for (let y = 0; y < navigationArray.length; y++) console.log(navigationArray[y].className.includes(observedElementClassArray[i]));
-                }
-                //navigationArray.filter((element) => observedElementClassArray.findIndex(element))
+                entry.target.classList.add("in-view");
             }
         });
-    }, options);
-    observer.observe(element);
-}
+    },
+    { threshold: 0.4 }
+);
 
-addObserver(".page");
+pages.forEach((page) => {
+    observer.observe(page);
+});
