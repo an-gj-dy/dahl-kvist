@@ -1,35 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script src="main.js" defer></script>
-        <link rel="stylesheet" href="style.css" />
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-        </style>
-        <title>Dahl & Kvist</title>
-    </head>
-    <body>
-        <main>
-            <section home class="page home page-home">
-                <h1>Dahl & Kvist</h1>
-            </section>
-            <nav class="sticky-navbar">
-                <ul>
-                    <li class="home">Hem</li>
-                    <li class="menu">Meny</li>
-                    <li class="booking">Boka bord</li>
-                    <li class="location">Hitta hit</li>
-                    <li class="about">Om oss</li>
-                </ul>
-            </nav>
-            <section class="page menu page-menu">Menu</section>
-            <section class="page booking page-booking">Booking</section>
-            <section class="page location page-location">Location</section>
-            <section class="page about page-about">About</section>
-            <footer></footer>
-        </main>
-    </body>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="main.js" type="module" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Dahl & Kvist</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="" class="nav-item">Boka bord</a>
+            <a href="" class="nav-item">Menyer</a>
+            <a href="" class="nav-item">Hitta hit</a>
+            <div class="hamburger">
+                <div class="top"></div>
+                <div class="mid"></div>
+                <div class="bot"></div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="page home">
+            <h1>Dahl & Kvist</h1>
+            <video autoplay="true" loop="true" muted="true" playsinline="true" 0="{}">
+                <source src="./vid/Fireplace - 1971.mp4" type="video/webm" />
+                Your browser does not support the video tag.
+            </video>
+        </section>
+        <section class="page">
+            <div class="page-container">
+                <div class="text-container">
+                    <h2>Lorem ipsum</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sed officiis eum asperiores
+                        quis
+                        sint
+                        omnis quasi vero enim non iure tempore rerum, incidunt magnam tenetur. Facere commodi
+                        perspiciatis
+                        alias?</p>
+                </div>
+                <div class="image-container"><img src="/img/flour1.jpg"></div>
+            </div>
+        </section>
+        <section class="page"></section>
+        <section class="page"></section>
+        <section class="page"></section>
+    </main>
+</body>
+
 </html>
